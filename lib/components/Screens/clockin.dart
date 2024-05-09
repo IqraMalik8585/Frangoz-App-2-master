@@ -10,7 +10,7 @@ import '../../Globals.dart';
 import 'package:location/location.dart' as loc;
 import 'dart:async' show Completer, Future, Timer;
 
-//tarcker
+//tarckerrrrrrrrrrrr
 final FirebaseAuth auth = FirebaseAuth.instance;
 final User? user = auth.currentUser;
 final myUid = loginEmail;
