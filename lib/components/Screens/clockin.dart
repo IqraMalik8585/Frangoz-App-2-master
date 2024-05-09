@@ -16,21 +16,6 @@ final User? user = auth.currentUser;
 final myUid = loginEmail;
 final name = loginName;
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await SharedPreferences.getInstance();
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage2(),
-    );
-  }
-}
-
 class HomePage2 extends StatefulWidget {
   @override
   _HomePage2State createState() => _HomePage2State();
@@ -195,8 +180,6 @@ class _HomePage2State extends State<HomePage2> {
                   startTimer();
                   _saveCurrentTime();
                   _saveClockStatus(true);
-                  //_getLocation();
-                  //getLocation();
                   _clockRefresh();
                   isClockedIn = true;
                 } else {
@@ -312,7 +295,6 @@ class _AnimatedLogoState extends State<AnimatedLogo>
       ),
     );
   }
-
   @override
   void dispose() {
     controller.dispose();

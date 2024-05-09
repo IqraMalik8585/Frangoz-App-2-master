@@ -15,10 +15,10 @@ import 'package:workmanager/workmanager.dart';
 import 'Globals.dart';
 import 'Tracker/trac.dart';
 import 'package:permission_handler/permission_handler.dart';
-
 import 'location00.dart';
 void main()  async{
   WidgetsFlutterBinding.ensureInitialized();
+  await initializeServiceLocation();
   await _requestPermissions();
   await Firebase.initializeApp();
   Workmanager().initialize(callbackDispatcher, isInDebugMode: true);
